@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    
+    <title>Homework 3 | Duke</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="简答题 简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点。  从项目特点、风险特征、人力资源利用角度思考。  Answer：  瀑布模型：">
+<meta name="keywords" content="博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Homework 3">
+<meta property="og:url" content="http://dukecheung.github.io/2019/03/23/2019-03-23-HW3/index.html">
+<meta property="og:site_name" content="Duke">
+<meta property="og:description" content="简答题 简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点。  从项目特点、风险特征、人力资源利用角度思考。  Answer：  瀑布模型：">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://www.hdwallpapers.net/previews/the-invisible-part-of-the-iceberg-746.jpg">
+<meta property="og:updated_time" content="2019-03-23T02:52:09.683Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Homework 3">
+<meta name="twitter:description" content="简答题 简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点。  从项目特点、风险特征、人力资源利用角度思考。  Answer：  瀑布模型：">
+<meta name="twitter:image" content="https://www.hdwallpapers.net/previews/the-invisible-part-of-the-iceberg-746.jpg">
+    
+
+    
+
+    
+        <link rel="icon" href="/css/images/avatar.jpg">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-116490199-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Duke</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">Home</a>
+                
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                
+                    <a class="main-nav-link" href="/categories">Categories</a>
+                
+                    <a class="main-nav-link" href="/tags">Tags</a>
+                
+                    <a class="main-nav-link" href="/about">About</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/avatar.jpg" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">Home</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">Categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">Tags</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">About</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/avatar.jpg" />
+            <h2 id="name">Duke</h2>
+            <h3 id="title">Software Engineering Student</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>GuangZhou, China</span>
+            <a id="follow" target="_blank" href="https://github.com/dukecheung/">关注我</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                17
+                <span>文章</span>
+            </div>
+            <div class="article-info-block">
+                1
+                <span>标签</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="http://github.com/dukecheung/hexo-theme-icarus" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/css/images/wechat.png" target="_blank" title="wechat" class=tooltip>
+                            <i class="fa fa-wechat"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/css/images/qq.jpg" target="_blank" title="qq" class=tooltip>
+                            <i class="fa fa-qq"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-2019-03-23-HW3" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<img src="https://www.hdwallpapers.net/previews/the-invisible-part-of-the-iceberg-746.jpg" class="article-banner" />
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Homework 3
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019/03/23/2019-03-23-HW3/">
+            <time datetime="2019-03-23T02:47:30.000Z" itemprop="datePublished">2019-03-23</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/系统分析与设计/">系统分析与设计</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/博客/">博客</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h3 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h3><ol>
+<li><p>简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点。</p>
+<ul>
+<li>从项目特点、风险特征、人力资源利用角度思考。</li>
+</ul>
+<p><em>Answer</em>：</p>
+<ul>
+<li><p>瀑布模型：</p>
+<a id="more"></a>
+<ul>
+<li>优点：<ol>
+<li>将项目分成多个阶段，每个阶段只需要关注当前阶段的情况，降低了软件开发的复杂程度。当前阶段完成后，只需要关注后续阶段。</li>
+<li>在软件实现过程之前必须先进行创意分析和设计等工作，可以降低风险。</li>
+<li>提供了统一的模型，使得分析、设计以及实现等过程方法有了一个统一的指导。</li>
+</ol>
+</li>
+<li>缺点：<ol>
+<li>依赖性强，若前面需求模糊，则后续工作无法展开。</li>
+<li>容错性差，在后期若发现前面的阶段出现了问题，则工作量会十分巨大。</li>
+<li>资源调配也容易出现问题，因为对知识技能的需求比较广，并且各个阶段负责的人员数量也有差异。</li>
+<li>基于以上原因，项目容易出现延期等问题，无法按时交付。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>增量模型：</p>
+<ul>
+<li>优点：<ol>
+<li>增强客户对系统的信心。</li>
+<li>降低系统失败风险。</li>
+<li>提高系统可靠性。</li>
+<li>提高系统的稳定性和可维护性。</li>
+</ol>
+</li>
+<li>缺点：<ol>
+<li>建立初始模型时，作为增量基础的基本业务服务的确定有一定难度。</li>
+<li>增量粒度难以选择。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>螺旋模型：</p>
+<ul>
+<li>优点：<ol>
+<li>引入了明确的风险管理机制。</li>
+<li>螺旋模型是风险驱动的迭代过程，有助于将软件质量作为特殊目标融入产品开发之中。</li>
+<li>结合了瀑布模型和快速原型方法，将瀑布模型的多个阶段转化到多个迭代过程中，降低了项目的风险。</li>
+</ol>
+</li>
+<li>缺点：<ol>
+<li>螺旋模型强调风险分析，但说服外部客户接受和相信分析结果并作出相关反应并不容易。</li>
+<li>风险分析需要耗费相当的成本，因此螺旋模型比较适合投资规模较大的软件项目。</li>
+<li>失误的风险分析可能带来更大的风险。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>简述统一过程三大特点，与面向对象的方法有什么关系？</p>
+<p><em>Answer</em>：</p>
+<ul>
+<li>三大特点：<ol>
+<li>用例驱动（Use Case Driven）</li>
+<li>以架构为中心（Architecture Centric）</li>
+<li>受控的迭代式增量开发（Iterative and Evolutionary）</li>
+</ol>
+</li>
+<li>统一过程是一个面向对象且给予网络的程序开发方法论。</li>
+</ul>
+</li>
+<li><p>简述统一过程四个阶段的划分准则是什么？每个阶段的关键里程碑是什么？</p>
+<p><em>Answer</em>：</p>
+<ul>
+<li><p>划分准则：</p>
+<ol>
+<li>用例驱动。</li>
+<li>以架构为中心。</li>
+<li>受控的迭代式增量开发。</li>
+</ol>
+</li>
+<li><p>四个阶段及其里程碑：</p>
+<ol>
+<li>初始阶段（Inception）：建立起目的的范围和版本，确定项目目标的可行性和稳定性，提交结果包括需求和用例。</li>
+<li>细化阶段（Elaboration）：一次迭代结束的标志是有重大的决定或者评估出现。该阶段建立起系统需求和架构，确定实现的可行性和稳定性。</li>
+<li>构造阶段（Construction）：开发出可以交付给用户的产品。</li>
+<li>交付阶段（Transition）：将软件产品交付用户。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>软件企业为什么能按固定节奏生产、固定周期发布软件产品？它给企业项目管理带来了哪些好处？</p>
+<p><em>Answer</em> ：软件企业采用了统一过程进行软件开发，将开发过程划分成几个阶段，明确了不同迭代的里程碑与目标；支持CI/CD的版本交付，为固定项目周期提供了可能。这样利用软件产品范围的弹性，合理规划范围，就能使软件生产按固定节奏运行，固定迭代周期、固定开发周期、固定升级周期。这样做可以使企业按照固定节奏进行软件产品开发，方便了项目管理，并且给其提供了管理的依据，使企业更加健康地成长。</p>
+</li>
+</ol>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://dukecheung.github.io/2019/03/23/2019-03-23-HW3/" data-id="ckoi7dnl4000wzsv0gjdb6int" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://dukecheung.github.io/2019/03/23/2019-03-23-HW3/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://dukecheung.github.io/2019/03/23/2019-03-23-HW3/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/04/03/2019-04-03/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    Longest Substring Without Repeating Characters
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2019/03/15/2019-03-15-HW2/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Homework 2</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2021/05/10/Unity-3D-血条制作/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://www.hdwallpapers.net/previews/starry-night-over-cape-cod-1126.jpg)" alt="Unity 3D 血条制作" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/3D-Game/">3D Game</a></p>
+                            <p class="item-title"><a href="/2021/05/10/Unity-3D-血条制作/" class="title">Unity 3D 血条制作</a></p>
+                            <p class="item-date"><time datetime="2021-05-10T04:56:49.202Z" itemprop="datePublished">2021-05-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/06/26/2019-06-26-HW10/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://www.hdwallpapers.net/previews/lioness-in-black-and-white-852.jpg)" alt="Homework 10" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/系统分析与设计/">系统分析与设计</a></p>
+                            <p class="item-title"><a href="/2019/06/26/2019-06-26-HW10/" class="title">Homework 10</a></p>
+                            <p class="item-date"><time datetime="2019-06-26T13:15:30.000Z" itemprop="datePublished">2019-06-26</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/06/23/2019-06-23-WorkReport/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://www.hdwallpapers.net/previews/goat-at-pilatus-switzerland-872.jpg)" alt="微信小程序开发技术总结" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/系统分析与设计/">系统分析与设计</a></p>
+                            <p class="item-title"><a href="/2019/06/23/2019-06-23-WorkReport/" class="title">微信小程序开发技术总结</a></p>
+                            <p class="item-date"><time datetime="2019-06-23T14:15:30.000Z" itemprop="datePublished">2019-06-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/06/23/2019-06-23-SWSAD/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://www.hdwallpapers.net/previews/pelican-island-sunset-british-virgin-islands-245.jpg)" alt="系统分析与设计个人总结" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/系统分析与设计/">系统分析与设计</a></p>
+                            <p class="item-title"><a href="/2019/06/23/2019-06-23-SWSAD/" class="title">系统分析与设计个人总结</a></p>
+                            <p class="item-date"><time datetime="2019-06-23T12:15:30.000Z" itemprop="datePublished">2019-06-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/04/30/2019-04-30-HW9/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://www.hdwallpapers.net/previews/volcanic-lightning-743.jpg)" alt="Homework 9" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/系统分析与设计/">系统分析与设计</a></p>
+                            <p class="item-title"><a href="/2019/04/30/2019-04-30-HW9/" class="title">Homework 9</a></p>
+                            <p class="item-date"><time datetime="2019-04-30T12:15:30.000Z" itemprop="datePublished">2019-04-30</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/3D-Game/">3D Game</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/加密算法/">加密算法</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/汇编语言/">汇编语言</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/系统分析与设计/">系统分析与设计</a><span class="category-list-count">9</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a><span class="tag-list-count">17</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/博客/" style="font-size: 10px;">博客</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2021 ZhangXing<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'http://dukecheung.github.io/2019/03/23/2019-03-23-HW3/';
+        
+        this.page.identifier = '2019-03-23-HW3';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'duke-cheung-1' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
